@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../controller/useful_read_providers.dart';
-
+import '../controller/change_name_and_city.dart';
+import '../controller/clear_name_and_city.dart';
+import '../controller/counter_widget.dart';
+import '../controller/raise_and_reduce_age_of_little_monk.dart';
+import '../controller/watch_name_and_city.dart';
 import '../model/any_type_provider_model.dart';
 
 class StateProviderExample extends ConsumerWidget {
@@ -9,85 +12,61 @@ class StateProviderExample extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
-    final stateProviderObject = watch(stateProviderInteger).state;
-    final stateProviderStringObject = watch(stateProviderString).state;
+    final stateProviderIntegerObject = watch(stateProviderInteger).state;
+    final stateProviderNameObject = watch(stateProviderName).state;
+    final stateProviderCityObject = watch(stateProviderCity).state;
     final stateProviderInstance = watch(stateProviderClass).state;
 
     return Padding(
       padding: EdgeInsets.all(
         10.0,
       ),
-      child: Center(
-        child: Column(
-          children: [
-            Text(
-              '${stateProviderObject.toString()}',
-              style: TextStyle(
-                fontSize: 30.0,
-              ),
+      child: ListView(
+        children: [
+          Text(
+            'Providers come in many variants, but they all work the same way.'
+            ' Let us start with a simple counter then doing some more complex staff',
+            style: TextStyle(
+              fontSize: 20.0,
             ),
-            SizedBox(
-              height: 10.0,
+          ),
+          Padding(
+            padding: EdgeInsets.all(
+              8.0,
             ),
-            FloatingActionButton(
-              onPressed: () => increment(context),
-              tooltip: 'Increment',
-              child: Icon(Icons.add),
+            child: CounterWidget(
+                stateProviderIntegerObject: stateProviderIntegerObject),
+          ),
+          Space(),
+          WatchNameAndCity(
+              stateProviderNameObject: stateProviderNameObject,
+              stateProviderCityObject: stateProviderCityObject),
+          ChangeNameAndCity(),
+          ClearNameAndCity(),
+          Space(),
+          Text(
+            '${stateProviderInstance.littleMonk}.'
+            ' I am now ${stateProviderInstance.ageOfLittleMonk} years old!',
+            style: TextStyle(
+              fontSize: 30.0,
             ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              stateProviderStringObject,
-              style: TextStyle(
-                fontSize: 30.0,
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => changeName(context),
-              child: Text(
-                'Change name',
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            ElevatedButton(
-              onPressed: () => clearName(context),
-              child: Text(
-                'Back to Previous',
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              stateProviderInstance.littleMonk,
-              style: TextStyle(
-                fontSize: 30.0,
-              ),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            ElevatedButton(
-              onPressed: () => changeLittleMonk(context),
-              child: Text(
-                'Grow Little Monk',
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+          RaiseAndReduceAgeOfLittleMonk(),
+        ],
       ),
+    );
+  }
+}
+
+class Space extends StatelessWidget {
+  const Space({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 10.0,
     );
   }
 }
