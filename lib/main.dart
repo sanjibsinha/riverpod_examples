@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_examples/change-notifier-provider/change_notifier_provider.dart';
-import 'package:riverpod_examples/state-notifier-provider/state_notifier_provider.dart';
-
+import 'state-notifier-provider/view/home_cart_notifier.dart';
 import 'state-provider/view/state_provider_example.dart';
 
 // import 'provider/controller/provider_example_widget.dart';
@@ -21,7 +19,8 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: Home(),
-      home: HomeOfChangeNotifierProvider(),
+      // home: HomeOfChangeNotifierProvider(),
+      home: HomeCartNotifier(),
     );
   }
 }
