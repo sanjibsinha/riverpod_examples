@@ -6,10 +6,11 @@ import 'state-provider/view/state_provider_example.dart';
 // import 'provider/controller/provider_example_widget.dart';
 
 void main() {
-  runApp(ProviderScope(child: App()));
+  runApp(const ProviderScope(child: App()));
 }
 
 class App extends StatelessWidget {
+  const App({Key key}) : super(key: key);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
       ),
       // home: Home(),
       // home: HomeOfChangeNotifierProvider(),
-      home: HomeCartNotifier(),
+      home: const HomeCartNotifier(),
     );
   }
 }

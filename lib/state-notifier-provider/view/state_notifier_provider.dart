@@ -25,7 +25,7 @@ class HomeStateNotifierProvider extends ConsumerWidget {
               onPressed: () =>
                   context.read(nameNotifierProvider).addNames('Now you can '
                       'add name!'),
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
             SizedBox(
               height: 10.0,
@@ -34,7 +34,7 @@ class HomeStateNotifierProvider extends ConsumerWidget {
               onPressed: () =>
                   context.read(nameNotifierProvider).updateNames('Now you can '
                       'update the name!'),
-              child: Icon(Icons.add),
+              child: const Icon(Icons.add),
             ),
           ],
         ),

@@ -3,18 +3,20 @@ import 'state_notifier_provider.dart';
 import 'cart_notifier_provider.dart';
 
 class HomeCartNotifier extends StatelessWidget {
+  const HomeCartNotifier({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Riverpod Examples'),
       ),
-      body: AnExpensiveWidget(),
+      body: const AnExpensiveWidget(),
     );
   }
 }
 
 class AnExpensiveWidget extends StatelessWidget {
+  const AnExpensiveWidget({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,32 +25,38 @@ class AnExpensiveWidget extends StatelessWidget {
       ),
       child: ListView(
         children: [
-          Text(
+          const Text(
             'We can place any expensive widget tree here!',
-            style: Theme.of(context).textTheme.headline5,
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          Text(
+          const Text(
             'One example of State Notifier Provider'
             ' can be placed here',
-            style: Theme.of(context).textTheme.headline6,
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          HomeStateNotifierProvider(),
+          const HomeStateNotifierProvider(),
           // HomeStateNotifierProvider(),
-          Text(
+          const Text(
             'Another example of State Notifier Provider'
             ' given below!',
-            style: Theme.of(context).textTheme.headline6,
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          CartNotifierProvider(),
+          const CartNotifierProvider(),
         ],
       ),
     );

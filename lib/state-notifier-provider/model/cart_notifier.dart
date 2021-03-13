@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ClassOfItems {
-  String items;
-  ClassOfItems({this.items});
+  final String items;
+  const ClassOfItems({this.items});
 }
 
 class CartNotifier extends StateNotifier<ClassOfItems> {

@@ -13,18 +13,22 @@ class BodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(children: [
-        Text(cartStateNotifierProvider.items,
-          style: Theme.of(context).textTheme.headline4,
-        ),
-        SizedBox(height: 10.0,),
-        FloatingActionButton(
-          onPressed: () => context.read(itemNotifier).addToCart(
-            ClassOfItems(items: 'Added to cart'),
+      child: Column(
+        children: [
+          Text(
+            cartStateNotifierProvider.items,
+            style: Theme.of(context).textTheme.headline4,
           ),
-          child: Icon(Icons.add),
-        ),
-      ],
+          SizedBox(
+            height: 10.0,
+          ),
+          FloatingActionButton(
+            onPressed: () => context.read(itemNotifier).addToCart(
+                  ClassOfItems(items: 'Added to cart'),
+                ),
+            child: Icon(Icons.add),
+          ),
+        ],
       ),
     );
   }

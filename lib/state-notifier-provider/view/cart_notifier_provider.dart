@@ -12,4 +12,3 @@ class CartNotifierProvider extends ConsumerWidget {
     return BodyWidget(cartStateNotifierProvider: cartStateNotifierProvider);
   }
 }
-
