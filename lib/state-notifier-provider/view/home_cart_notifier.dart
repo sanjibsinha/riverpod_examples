@@ -44,7 +44,7 @@ class AnExpensiveWidget extends StatelessWidget {
           const SizedBox(
             height: 10.0,
           ),
-          const HomeStateNotifierProvider(),
+          HomeStateNotifierProvider(),
           // HomeStateNotifierProvider(),
           const Text(
             'Another example of State Notifier Provider'
@@ -56,7 +56,7 @@ class AnExpensiveWidget extends StatelessWidget {
           const SizedBox(
             height: 10.0,
           ),
-          const CartNotifierProvider(),
+          CartNotifierProvider(),
         ],
       ),
     );

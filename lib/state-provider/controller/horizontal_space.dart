@@ -7,7 +7,7 @@ class HorizontalSpace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return VerticalDivider(
+    return const VerticalDivider(
       thickness: 2.0,
       color: Colors.red,
     );

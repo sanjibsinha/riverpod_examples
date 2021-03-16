@@ -9,7 +9,7 @@ class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
+      padding: const EdgeInsets.all(
         8.0,
       ),
       child: Row(
@@ -23,7 +23,10 @@ class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
               ),
             ),
           ),
-          VerticalDivider(),
+          const VerticalDivider(
+            thickness: 2.0,
+            color: Colors.red,
+          ),
           ElevatedButton(
             onPressed: () => reverseAgeOfLittleMonk(context),
             child: Text(

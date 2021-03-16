@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'state-provider/view/state_provider_home.dart';
+import 'change-notifier-provider/change_notifier_provider.dart';
 import 'state-notifier-provider/view/home_cart_notifier.dart';
 import 'state-provider/view/state_provider_example.dart';
 
@@ -19,24 +21,11 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: Home(),
+      home: Home(),
       // home: HomeOfChangeNotifierProvider(),
-      home: const HomeCartNotifier(),
+      // home: HomeCartNotifier(),
     );
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({Key key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Riverpod Examples'),
-      ),
-      // body: ProviderExampleWidget(),
-      body: StateProviderExample(),
-    );
-  }
-}

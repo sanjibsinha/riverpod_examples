@@ -24,7 +24,10 @@ class ClearNameAndCity extends StatelessWidget {
               ),
             ),
           ),
-          HorizontalSpace(),
+          const VerticalDivider(
+            thickness: 2.0,
+            color: Colors.red,
+          ),
           ElevatedButton(
             onPressed: () => clearCity(context),
             child: Text(

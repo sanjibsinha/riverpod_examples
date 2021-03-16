@@ -20,15 +20,21 @@ class CounterWidget extends StatelessWidget {
             fontSize: 30.0,
           ),
         ),
-        HorizontalSpace(),
+        const VerticalDivider(
+          thickness: 2.0,
+          color: Colors.red,
+        ),
         FloatingActionButton(
           onPressed: () => increment(context),
           tooltip: 'Increment',
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
-        HorizontalSpace(),
+        const VerticalDivider(
+          thickness: 2.0,
+          color: Colors.red,
+        ),
         Container(
-          padding: EdgeInsets.all(
+          padding: const EdgeInsets.all(
             8.0,
           ),
           child: Text(

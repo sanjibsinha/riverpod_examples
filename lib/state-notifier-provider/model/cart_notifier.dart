@@ -6,7 +6,7 @@ class ClassOfItems {
 }
 
 class CartNotifier extends StateNotifier<ClassOfItems> {
-  CartNotifier() : super(ClassOfItems(items: 'First Item'));
+  CartNotifier() : super(ClassOfItems(items: ''));
   void addToCart(ClassOfItems items) {
     state = items;
   }

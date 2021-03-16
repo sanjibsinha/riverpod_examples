@@ -24,7 +24,10 @@ class ChangeNameAndCity extends StatelessWidget {
               ),
             ),
           ),
-          HorizontalSpace(),
+          const VerticalDivider(
+            thickness: 2.0,
+            color: Colors.red,
+          ),
           ElevatedButton(
             onPressed: () => changeCity(context),
             child: Text(

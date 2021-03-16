@@ -19,14 +19,14 @@ class BodyWidget extends StatelessWidget {
             cartStateNotifierProvider.items,
             style: Theme.of(context).textTheme.headline4,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           FloatingActionButton(
             onPressed: () => context.read(itemNotifier).addToCart(
                   ClassOfItems(items: 'Added to cart'),
                 ),
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
         ],
       ),
