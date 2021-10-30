@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'state-provider/view/state_provider_home.dart';
-import 'change-notifier-provider/change_notifier_provider.dart';
-import 'state-notifier-provider/view/home_cart_notifier.dart';
-import 'state-provider/view/state_provider_example.dart';
+//import 'change-notifier-provider/change_notifier_provider.dart';
+//import 'state-notifier-provider/view/home_cart_notifier.dart';
+//import 'state-provider/view/state_provider_example.dart';
 
 // import 'provider/controller/provider_example_widget.dart';
 
@@ -19,7 +19,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: Home(),
       // home: HomeOfChangeNotifierProvider(),
@@ -27,5 +27,3 @@ class App extends StatelessWidget {
     );
   }
 }
-
-

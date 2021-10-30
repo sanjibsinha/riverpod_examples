@@ -12,7 +12,7 @@ class RaiseAndReduceAgeOfLittleMonk extends StatelessWidget {
       padding: const EdgeInsets.all(
         8.0,
       ),
-      child: Row(
+      child: Column(
         children: [
           ElevatedButton(
             onPressed: () => changeLittleMonk(context),
